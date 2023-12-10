@@ -89,15 +89,28 @@ body {
 }
 
 #mainscreen {
-  height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   align-items: center;
   background-color: $backgroundgreen;
+  position: relative;
+
+  .clouds {
+    display: flex;
+    height: 263px;
+    position: absolute;
+    bottom: 0;
+    z-index: 12;
+    right: 0;
+    width: 100%;
+    background-image: url("/img/main_screen/clouds.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+  }
 
   .container {
-    padding: 140px;
-    // padding: 140px 140px 280px;
+    padding: 140px 140px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,6 +162,10 @@ body {
       background-color: $backgroundgreen;
       position: relative;
 
+      .girl {
+        width: 500px;
+        height: 550px;
+      }
       .note {
         position: absolute;
         z-index: 1;
@@ -225,9 +242,15 @@ body {
         }
 
         &.l {
-          bottom: 285px;
-          left: 90px;
-          transform: rotate(8deg);
+          bottom: 345px;
+          left: 130px;
+          transform: rotate(1deg);
+        }
+
+        &.m {
+          bottom: 320px;
+          left: 210px;
+          transform: rotate(5deg);
         }
       }
     }
@@ -243,6 +266,177 @@ body {
         top: 25%;
         left: 100px;
         transform: rotate(45deg);
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .container {
+      .right {
+        .girl {
+          width: 454px;
+          height: 530px;
+        }
+        .star {
+          &.b {
+            left: -120px;
+          }
+
+          &.l {
+            bottom: 317px;
+            left: 140px;
+          }
+
+          &.m {
+            bottom: 292px;
+            left: 197px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .container {
+      padding: 100px;
+
+      .left {
+        h1 {
+          font-size: 34px;
+        }
+
+        &__benefits {
+          &__icon {
+            font-size: 18px;
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 420px;
+          height: 480px;
+        }
+
+        .speech_bubble {
+          bottom: 53%;
+          right: -40px;
+          width: 80px;
+          height: 53px;
+        }
+
+        .note {
+          width: 175px;
+          height: 150px;
+          left: -20px;
+        }
+
+        .star {
+          &.b {
+            left: -120px;
+          }
+
+          &.k {
+            bottom: 220px;
+            left: 37px;
+          }
+
+          &.l {
+            bottom: 245px;
+            left: 90px;
+          }
+
+          &.m {
+            bottom: 218px;
+            left: 148px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 23%;
+          left: 75px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .container {
+      padding: 65px 60px;
+
+      .left {
+        h1 {
+          font-size: 30px;
+          max-width: 380px;
+        }
+
+        &__benefits {
+          gap: 10px;
+
+          &__icon {
+            font-size: 16px;
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 360px;
+          height: 420px;
+        }
+
+        .speech_bubble {
+          bottom: 53%;
+          right: -40px;
+          width: 80px;
+          height: 53px;
+        }
+
+        .note {
+          width: 145px;
+          height: 120px;
+          left: -25px;
+        }
+
+        .star {
+          &.b {
+            left: -120px;
+          }
+
+          &.k {
+            bottom: 220px;
+            left: 37px;
+          }
+
+          &.l {
+            bottom: 245px;
+            left: 90px;
+          }
+
+          &.m {
+            bottom: 218px;
+            left: 148px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 23%;
+          left: 75px;
+        }
       }
     }
   }
