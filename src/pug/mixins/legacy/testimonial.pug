@@ -1,0 +1,8 @@
+mixin testimonial(img='avatar', quote='“ I love this product and would recommend it to anyone. Could be not easier to use, and our multiple websites are wonderful. We get nice comments all the time. “', name='Darya Finger', post='CEO & Co-Founder', company='@Dropbox')
+   .testimonial
+      img(src="../../img/" + img + '.png', alt="" + name, width='96' height='96')
+      .quote
+         span #{quote}
+      h5 #{name}
+      h6 #{post}
+         span #{company}

@@ -1,0 +1,17 @@
+include ./link.pug
+mixin post (title ='Austin DIY sriracha polaroid sartorial la croix.', date='December 26, 2019', comments = 5, photo='gon', description = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium consequuntur deserunt culpa cum voluptas autem commodi odit sint a explicabo temporibus quae illum quos nulla eum minima consectetur sit accusamus necessitatibus reprehenderit reiciendis corrupti nemo, nisi saepe! Maxime eveniet ab sit pariatur officia quas numquam! Architecto ullam pariatur porro ipsa tempore eos cum fugiat aut repudiandae voluptate quasi mollitia corrupti, voluptatem hic ex nobis consequuntur sapiente ad non minima culpa. Vel quibusdam minima ipsum omnis. Vitae minima nemo labore voluptas?')
+   section#post 
+      h1 #{title}
+      .info 
+         h4 #{date} - &nbsp;
+         h4 #{comments} comments
+
+      img(src="../../img/" + photo + ".png", alt="" + photo).photo
+      p #{description}
+      .social 
+         button Read More
+         .icons
+            +iconlink("https://whatsapp.com", "whatsapp")
+            +iconlink("https://instagram.com", "instagram")
+            +iconlink("https://twitter.com", "twitter")
+            +iconlink("https://facebook.com", "facebook-f")

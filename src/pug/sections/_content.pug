@@ -1,0 +1,78 @@
+include ../mixins/button.pug
+include ../mixins/mark.pug
+include ../mixins/benefitbox.pug
+include ../mixins/benefiticon.pug
+include ../mixins/card.pug
+include ../mixins/package.pug
+include ../mixins/slide.pug
+include ../mixins/form.pug
+
+
+include ../../utils/sliderData.pug
+
+-
+   var data = [{
+      title: 'Зарегистрированный товарный знак «Вершина результата»',
+      regular: 'Бренд-бук и авторские брендированные учебные материалы.',
+   }, 
+   {
+      title: 'Методика',
+      regular: 'Передаем обучающие программы, обучаем работе по авторской методике Нины Тумановой.',
+   }, 
+   {
+      title: 'Бизнес-бук',
+      regular: 'Подробная база знаний с необходимыми документами для всех этапов работы и внутренних процессов.',
+   },
+   {
+      title: 'Помещение',
+      regular: 'Помощь и консультация по поиску, подбору и аренде помещения, ремонту и брендированию, планированию и зонированию помещения.',
+   },
+   {
+      title: 'Персонал',
+      regular: 'Консультируем по подбору и обучению персонала, обучаем и выводим на требуемый уровень компетенций, помогаем наладить адаптацию и мотивацию сотрудников.',
+   },
+   {
+      title: 'Рекламная кампания',
+      regular: 'Помогаем составить индивидуальную рекламную стратегию на основании анализа конкурентов и ценовой политики. Передаем необходимые инструкции и чек-листы по всем направлениям маркетинга.',
+   }]
+
+      
+   var imgBenefitsIcon = [{
+      text: 'Дарим красивую речь', 
+      img: './img/benefits/vectors/like.svg',
+   }, 
+   {
+      text: 'Даем быстрый результат', 
+      img: './img/benefits/vectors/startup.svg',
+   }, 
+   {
+      text: 'Оздоравливаем поколение', 
+      img: './img/benefits/vectors/medico.svg',
+   },
+   {
+      text: 'Получаем прибыль', 
+      img: './img/benefits/vectors/chart.svg',
+   }]
+
+
+
+main
+   //- include _footer.pug 
+
+   //- .box 
+   //-    each benefit in imgBenefitsIcon
+   //-       +benefiticon(benefit.text,  benefit.img)
+   //- +mark('lorem ipsum dolar', 'lorem ipsum dolar')
+   //- +benefitbox('Lorem Ipsum Dolar!!!', data)
+   //- +button('https://google.com','Lorem Lorem Lorem!')
+   //- +button('https://google.com','Lorem Lorem Lorem!', 'orange')
+   //- +card
+   //- .containerPackage
+   //-    +package
+   //- .slider 
+   //-    each slide in slider 
+   //-       +slide(slide.num, slide.title, slide.description, slide.paragraph, slide.img, slide.marks)
+   +form   
+
+
+

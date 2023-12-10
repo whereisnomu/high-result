@@ -1,0 +1,8 @@
+mixin card(num = '01', text = 'Наши методики акцентированы на современное поколение, которое требует нововведений в коррекции и обучении детей.', img ='./img/about_methods/card/icons/green.svg', rotate='0')
+   .card(style='transform: rotate(' + rotate + 'deg)')
+      .card__container
+         .top
+            img(src=img, alt="" + text width=60 height=60)
+            span #{num}
+         .bottom
+            h4 #{text}

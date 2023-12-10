@@ -1,0 +1,270 @@
+footer {
+  background-color: $dark;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+
+  .container {
+    display: flex;
+    z-index: 2;
+    height: inherit;
+    align-items: center;
+    padding: 40px 140px 25px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: self-end;
+    align-self: self-end;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 70px;
+      color: #fff;
+      font-size: 16px;
+
+      .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        .logo {
+          margin-right: 50px;
+        }
+
+        .tabs {
+          display: flex;
+          gap: 30px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      color: #fff !important;
+      gap: 70px;
+
+      .call {
+        display: flex;
+
+        &__container {
+          display: flex;
+          flex-direction: column;
+
+          a {
+            text-decoration: none;
+            color: #fff;
+
+            span {
+              display: flex;
+              align-items: baseline;
+              justify-content: center;
+
+              sub {
+                font-size: 13px;
+              }
+
+              span {
+                font-size: 17px;
+              }
+            }
+          }
+
+          h6 {
+            font-weight: 300;
+            color: #ef7f1a;
+            align-self: end;
+          }
+        }
+      }
+
+      span {
+        font-size: 14px;
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+    }
+
+    .policy {
+      display: none;
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+
+  .pud,
+  .shape,
+  .sshape {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .pud {
+    bottom: 0;
+  }
+
+  .shape {
+    right: 50%;
+    bottom: 50%;
+  }
+
+  .sshape {
+    right: 40px;
+    top: 0;
+  }
+
+  @media (max-width: $lscreen) {
+    .container {
+      padding: 40px 100px 25px;
+
+      .left {
+        font-size: 14px;
+        .navigation {
+          .logo {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .container {
+      padding: 40px 60px 25px;
+      align-items: center;
+
+      .left {
+        font-size: 14px;
+
+        .navigation {
+          .logo {
+            margin-right: 0px;
+          }
+
+          .tabs {
+            gap: 15px;
+            flex-wrap: wrap;
+          }
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .right {
+        .call {
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          &__container {
+            a {
+              span {
+                span {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+
+      .left {
+        span {
+          display: none;
+        }
+
+        .navigation {
+          gap: 20px;
+
+          .logo {
+            a {
+              img {
+                width: 48px;
+                height: 48px;
+              }
+            }
+          }
+        }
+
+        margin-bottom: 10px;
+      }
+
+      .right {
+        span {
+          display: none;
+        }
+        margin-bottom: 10px;
+      }
+
+      .policy {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .container {
+      .left {
+        .navigation {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .tabs {
+            font-size: 14px;
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+      }
+
+      .right {
+        .call {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    .shape {
+      top: 0;
+    }
+
+    .sshape {
+      right: 0;
+    }
+  }
+}

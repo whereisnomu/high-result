@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap");
+
+@import "./modules/reset";
+
+@import "./variables";
+
+@import "./mixins";
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+  opacity: 1;
+  z-index: 99;
+
+  button {
+    outline: none;
+    border: none;
+    color: $w;
+    font-weight: 700;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    color: $dark;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+  }
+
+  main {
+    height: 100%;
+    display: flex;
+    align-items: start;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.containerPackage {
+  display: flex;
+  gap: 40px;
+
+  .package {
+    &:first-child {
+      .package__container {
+        .info {
+          padding-bottom: 102px;
+        }
+      }
+    }
+
+    &:last-child {
+      .package__container {
+        .info {
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+}
+
+@import "./modules/footer";

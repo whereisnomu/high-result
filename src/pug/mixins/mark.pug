@@ -1,0 +1,9 @@
+mixin mark(title = '', regular = '')
+   .mark 
+      img(src="./img/benefits/vectors/check.svg", alt="check" width=32 height=32)
+      .text
+         if title == ''
+            span.regular #{regular}
+         else 
+            span.title #{title}
+            span.regular #{regular}

@@ -1,0 +1,13 @@
+include button.pug 
+
+mixin form(action="404")
+   form(action=action)
+      input(type="text" placeholder="Имя" autocomplete='given-name') 
+      input(type="phone" placeholder="+ 7 (___) ___-___-__" autocomplete='tel')
+      input(type="email" placeholder="E-mail" autocomplete='email')
+      button(type='submit').button.green Оставить завку
+      .checkbox
+         input(type="checkbox" name='check' id='check' value='yes')
+         label(for="check")
+            span Заполняя форму на сайте, вы соглашаетесь на обработку персональных данных, а также с нашей 
+               a(href="#") Политикой конфиденциальности

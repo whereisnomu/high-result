@@ -1,0 +1,7 @@
+include mark.pug
+mixin benefitbox (header = 'Мы оказываем полноценную поддержку и контролируем запуск и работу центра:', data)
+   .benefitbox
+      h3.header #{header}
+      .benefitbox__container
+         each point in data 
+            +mark(point.title, point.regular)
