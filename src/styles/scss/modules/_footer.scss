@@ -31,10 +31,6 @@ footer {
         justify-content: center;
         gap: 30px;
 
-        .logo {
-          margin-right: 50px;
-        }
-
         .tabs {
           display: flex;
           gap: 30px;
@@ -58,12 +54,12 @@ footer {
 
       .call {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
 
         &__container {
           display: flex;
           flex-direction: column;
-          align-items: end;
+          align-items: flex-end;
 
           a {
             text-decoration: none;
@@ -87,7 +83,7 @@ footer {
           h6 {
             font-weight: 300;
             color: #ef7f1a;
-            align-self: end;
+            align-self: flex-end;
           }
         }
       }
@@ -153,7 +149,13 @@ footer {
         font-size: 14px;
 
         .navigation {
+          gap: 15px;
+
           .logo {
+            img {
+              width: 48px;
+              height: 48px;
+            }
             margin-right: 0px;
           }
 
@@ -207,8 +209,6 @@ footer {
         }
 
         .navigation {
-          gap: 20px;
-
           .logo {
             a {
               img {

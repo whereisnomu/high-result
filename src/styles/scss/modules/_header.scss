@@ -75,7 +75,7 @@ header {
     padding: 8px 100px;
 
     .navigation {
-      gap: 15px;
+      gap: 30px;
 
       .logo {
         margin-right: 0px;
@@ -104,7 +104,7 @@ header {
     font-size: 14px;
 
     .navigation {
-      gap: 10px;
+      gap: 15px;
 
       nav a {
         font-size: 14px;
@@ -136,7 +136,7 @@ header {
   }
 
   @media (max-width: $tablet) {
-    justify-content: end;
+    justify-content: flex-end;
     padding: 15px 10px;
 
     .button {
