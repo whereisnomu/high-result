@@ -6,6 +6,8 @@
 
 @import "./mixins";
 
+@import "./fonts";
+
 html {
   scroll-behavior: smooth;
 }
@@ -85,5 +87,167 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#mainscreen {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
+  background-color: $backgroundgreen;
+
+  .container {
+    padding: 140px;
+    // padding: 140px 140px 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 540px;
+
+      &__benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        &__icon {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          font-size: 24px;
+          font-weight: 400;
+          color: $grey;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      h1 {
+        font-family: ComicCat;
+        font-size: 42px;
+        color: $dark;
+        span {
+          color: $green;
+        }
+      }
+    }
+    .button {
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 233px;
+    }
+
+    .right {
+      background-color: $backgroundgreen;
+      position: relative;
+
+      .note {
+        position: absolute;
+        z-index: 1;
+        left: -50px;
+      }
+
+      .speech_bubble {
+        position: absolute;
+        z-index: 3;
+        bottom: 51%;
+        right: -50px;
+      }
+
+      .star {
+        &.b {
+          transform: rotate(17deg);
+          left: -220px;
+          z-index: 1;
+          bottom: 80px;
+        }
+
+        &.c {
+          top: 0;
+          left: -120px;
+          transform: rotate(6deg);
+        }
+
+        &.d {
+          top: -20px;
+          left: 180px;
+          transform: rotate(359deg);
+        }
+
+        &.e {
+          top: 0px;
+          right: 80px;
+          transform: rotate(6deg);
+        }
+
+        &.f {
+          right: 0;
+          top: 80px;
+          transform: rotate(18deg);
+        }
+
+        &.g {
+          top: -30px;
+          right: -100px;
+          transform: rotate(-2deg);
+        }
+
+        &.h {
+          bottom: 220px;
+          right: -95px;
+          transform: rotate(24deg);
+        }
+
+        &.i {
+          bottom: 115px;
+          right: -60px;
+          transform: rotate(18deg);
+        }
+
+        &.j {
+          bottom: 120px;
+          left: -60px;
+          transform: rotate(8deg);
+        }
+
+        &.k {
+          bottom: 285px;
+          left: 90px;
+          transform: rotate(8deg);
+        }
+
+        &.l {
+          bottom: 285px;
+          left: 90px;
+          transform: rotate(8deg);
+        }
+      }
+    }
+
+    .star,
+    .speech_bubble {
+      position: absolute;
+      z-index: 3;
+    }
+
+    .star {
+      &.a {
+        top: 25%;
+        left: 100px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+@import "./modules/header";
 
 @import "./modules/footer";

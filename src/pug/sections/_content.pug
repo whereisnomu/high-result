@@ -6,6 +6,8 @@ include ../mixins/card.pug
 include ../mixins/package.pug
 include ../mixins/slide.pug
 include ../mixins/form.pug
+include ../mixins/cta.pug
+include ../mixins/popup.pug
 
 
 include ../../utils/sliderData.pug
@@ -57,7 +59,10 @@ include ../../utils/sliderData.pug
 
 
 main
-   //- include _footer.pug 
+   //- include _header.pug
+   //- include _footer.pug
+   include _mainscreen.pug 
+
 
    //- .box 
    //-    each benefit in imgBenefitsIcon
@@ -72,7 +77,9 @@ main
    //- .slider 
    //-    each slide in slider 
    //-       +slide(slide.num, slide.title, slide.description, slide.paragraph, slide.img, slide.marks)
-   +form   
+   //- +form 
+   //- +cta  
+   //- +popup
 
 
 

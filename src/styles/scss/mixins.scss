@@ -357,3 +357,79 @@ form {
     }
   }
 }
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 35px;
+
+  .text {
+    position: relative;
+    max-width: 305px;
+    font-size: 27px;
+    flex-direction: column;
+    z-index: 2;
+    top: -70px;
+
+    span {
+      font-weight: 500;
+      color: $dark;
+
+      .orange {
+        color: $orange;
+        font-weight: 600;
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      // bottom: -100px;
+      bottom: -80px;
+      transform: rotate(354deg);
+    }
+  }
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+  flex-direction: column;
+  padding: 70px;
+  background-color: $whitegreen;
+  border-radius: 6px;
+
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: "X";
+    top: 24px;
+    right: 32px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .text {
+    position: relative;
+    max-width: 360px;
+    font-size: 24px;
+    flex-direction: column;
+    z-index: 2;
+    text-align: center;
+
+    span {
+      font-weight: 500;
+      color: $dark;
+
+      .orange {
+        color: $orange;
+        font-weight: 600;
+      }
+    }
+  }
+}

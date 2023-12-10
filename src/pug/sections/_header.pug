@@ -1,0 +1,22 @@
+include ../mixins/button.pug
+header
+   .navigation
+      nav.logo
+         a(href="")
+            img(src="./img/logo.png", alt="logo" width=64 height=64) 
+      .tabs
+         nav
+            a(href="#") О проекте
+         nav
+            a(href="#") Преимущества
+         nav
+            a(href="#") Формат
+         nav
+            a(href="#") Франшиза
+         nav
+            a(href="#") Контакты
+         nav.get
+            a(href="#") Получить презентацию
+   +button("#", "Получить презентацию")
+   .burger
+      span

@@ -1,4 +1,250 @@
 @import "./../variables";
-
 header {
+  display: flex;
+  padding: 8px 140px;
+  background-color: $whitegreen;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  z-index: 50;
+  position: fixed; /*фиксируем шапку вверху экрана*/
+  top: 0;
+  left: 0;
+  //   max-width: 1400px;
+
+  &:before {
+    /*делаем плашку, которая перекроет меню в адаптиве*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    //  background-color: #313d49;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 1;
+
+    .get {
+      display: none;
+    }
+    .tabs {
+      display: flex;
+      gap: 30px;
+    }
+
+    .logo {
+      margin-right: 8px;
+    }
+
+    nav {
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: $dark;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    max-width: 280px;
+    max-height: 57px;
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      align-self: center;
+      display: flex;
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 8px 100px;
+
+    .navigation {
+      gap: 15px;
+
+      .logo {
+        margin-right: 0px;
+      }
+
+      .tabs {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .button {
+      padding: 12px 25px;
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 8px 60px;
+    align-items: center;
+
+    font-size: 14px;
+
+    .navigation {
+      gap: 10px;
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .logo {
+        margin-right: 0px;
+        img {
+          width: 48px;
+          height: 48px;
+        }
+      }
+
+      .tabs {
+        gap: 10px;
+
+        flex-wrap: wrap;
+      }
+    }
+
+    .button {
+      padding: 8px 15px;
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    justify-content: end;
+    padding: 15px 25px;
+
+    .button {
+      display: none;
+    }
+
+    .lock {
+      overflow: hidden; /*блокировать скролл при открытии меню*/
+    }
+
+    .burger {
+      display: block !important;
+      position: relative;
+      z-index: 3;
+      width: 30px;
+      height: 20px;
+    }
+
+    .burger:before,
+    .burger:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-color: #000;
+      width: 100%;
+      height: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .burger:before {
+      top: 0;
+    }
+
+    .burger:after {
+      bottom: 0;
+    }
+
+    .burger span {
+      position: absolute;
+      left: 0;
+      top: 9px;
+      background-color: #000;
+      width: 100%;
+      height: 3px;
+      transition: all 0.3s ease;
+    }
+
+    &.active:before {
+      transform: rotate(45deg);
+      top: 9px;
+    }
+    &.active:after {
+      transform: rotate(-45deg);
+      bottom: 9px;
+    }
+    &.active span {
+      transform: scale(0);
+    }
+
+    .navigation {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // gap: 40px;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /*Чтобы появился скролл у меню, если оно длиннее экрана*/
+      transition: all 0.3s ease;
+      z-index: 1;
+
+      &.active {
+        top: 0;
+        background-color: $whitegreen;
+      }
+
+      .tabs,
+      .get,
+      nav {
+        display: block !important;
+      }
+
+      .tabs {
+        text-align: center;
+        nav {
+          margin-bottom: 20px;
+          a {
+            font-size: 18px;
+            font-weight: 600;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .logo {
+        display: none;
+
+        a {
+          display: none;
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
 }
