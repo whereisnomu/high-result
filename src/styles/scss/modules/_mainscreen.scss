@@ -1,4 +1,647 @@
 @import "./../variables";
 
 #mainscreen {
+  width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
+  background-color: $backgroundgreen;
+  position: relative;
+  min-width: 320px;
+
+  .clouds {
+    display: flex;
+    height: 263px;
+    position: absolute;
+    bottom: 0;
+    z-index: 12;
+    right: 0;
+    width: 100%;
+    background-image: url("/img/main_screen/clouds.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+  }
+
+  .container {
+    padding: 140px 140px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 540px;
+
+      &__benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+
+        &__icon {
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          font-size: 24px;
+          font-weight: 400;
+          color: $grey;
+
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      h1 {
+        font-family: ComicCat;
+        font-size: 42px;
+        color: $dark;
+        span {
+          color: $green;
+        }
+      }
+    }
+    .button {
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 233px;
+    }
+
+    .right {
+      background-color: $backgroundgreen;
+      position: relative;
+
+      .girl {
+        width: 500px;
+        height: 550px;
+      }
+      .note {
+        position: absolute;
+        z-index: 1;
+        left: -50px;
+      }
+
+      .speech_bubble {
+        position: absolute;
+        z-index: 3;
+        bottom: 51%;
+        right: -50px;
+      }
+
+      .star {
+        &.b {
+          transform: rotate(17deg);
+          left: -220px;
+          z-index: 1;
+          bottom: 80px;
+        }
+
+        &.c {
+          top: 0;
+          left: -120px;
+          transform: rotate(6deg);
+        }
+
+        &.d {
+          top: -20px;
+          left: 180px;
+          transform: rotate(359deg);
+        }
+
+        &.e {
+          top: 0px;
+          right: 80px;
+          transform: rotate(6deg);
+        }
+
+        &.f {
+          right: 0;
+          top: 80px;
+          transform: rotate(18deg);
+        }
+
+        &.g {
+          top: -30px;
+          right: -100px;
+          transform: rotate(-2deg);
+        }
+
+        &.h {
+          bottom: 220px;
+          right: -95px;
+          transform: rotate(24deg);
+        }
+
+        &.i {
+          bottom: 115px;
+          right: -60px;
+          transform: rotate(18deg);
+        }
+
+        &.j {
+          bottom: 120px;
+          left: -60px;
+          transform: rotate(8deg);
+        }
+
+        &.k {
+          bottom: 285px;
+          left: 90px;
+          transform: rotate(8deg);
+        }
+
+        &.l {
+          bottom: 345px;
+          left: 130px;
+          transform: rotate(1deg);
+        }
+
+        &.m {
+          bottom: 320px;
+          left: 210px;
+          transform: rotate(5deg);
+        }
+      }
+    }
+
+    .star,
+    .speech_bubble {
+      position: absolute;
+      z-index: 3;
+    }
+
+    .star {
+      &.a {
+        top: 25%;
+        left: 100px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .container {
+      .right {
+        .girl {
+          width: 454px;
+          height: 530px;
+        }
+        .star {
+          &.b {
+            left: -120px;
+          }
+
+          &.l {
+            bottom: 317px;
+            left: 140px;
+          }
+
+          &.m {
+            bottom: 292px;
+            left: 197px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .container {
+      padding: 100px;
+
+      .left {
+        h1 {
+          font-size: 34px;
+        }
+
+        &__benefits {
+          &__icon {
+            font-size: 18px;
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 420px;
+          height: 480px;
+        }
+
+        .speech_bubble {
+          bottom: 53%;
+          right: -40px;
+          width: 80px;
+          height: 53px;
+        }
+
+        .note {
+          width: 175px;
+          height: 150px;
+          left: -20px;
+        }
+
+        .star {
+          &.b {
+            left: -120px;
+          }
+
+          &.k {
+            bottom: 220px;
+            left: 37px;
+          }
+
+          &.l {
+            bottom: 245px;
+            left: 90px;
+          }
+
+          &.m {
+            bottom: 218px;
+            left: 148px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 23%;
+          left: 75px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .clouds {
+      height: 180px;
+    }
+    .container {
+      padding: 65px 60px;
+
+      .left {
+        h1 {
+          font-size: 30px;
+          max-width: 380px;
+        }
+
+        &__benefits {
+          gap: 10px;
+
+          &__icon {
+            font-size: 16px;
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 360px;
+          height: 420px;
+        }
+
+        .speech_bubble {
+          bottom: 53%;
+          right: -40px;
+          width: 80px;
+          height: 53px;
+        }
+
+        .note {
+          width: 145px;
+          height: 120px;
+          left: -25px;
+        }
+
+        .star {
+          &.b {
+            left: -50px;
+            bottom: 10px;
+          }
+
+          &.c {
+            top: -25px;
+            left: -57px;
+            display: none;
+          }
+
+          &.d {
+            top: -25px;
+            left: 115px;
+          }
+
+          &.j {
+            bottom: 50px;
+            left: 5px;
+          }
+
+          &.k {
+            bottom: 204px;
+            left: 17px;
+          }
+
+          &.l {
+            bottom: 239px;
+            left: 77px;
+          }
+
+          &.m {
+            bottom: 224px;
+            left: 140px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 14%;
+          left: 32px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .clouds {
+      height: 180px;
+    }
+    .container {
+      padding: 65px 0 0;
+      flex-direction: column;
+      gap: 50px;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        h1 {
+          font-size: 30px;
+          max-width: 380px;
+          text-align: center;
+        }
+
+        &__benefits {
+          gap: 10px;
+
+          &__icon {
+            font-size: 16px;
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 300px;
+          height: 360px;
+        }
+
+        .speech_bubble {
+          bottom: 53%;
+          right: -40px;
+          width: 80px;
+          height: 53px;
+        }
+
+        .note {
+          width: 115px;
+          height: 95px;
+          left: -25px;
+        }
+
+        .star {
+          &.b {
+            left: -35px;
+            bottom: 22px;
+          }
+
+          &.c {
+            top: -25px;
+            left: -57px;
+            display: none;
+          }
+
+          &.d {
+            top: -3px;
+            left: 96px;
+          }
+
+          &.e {
+            top: -5px;
+            right: 51px;
+          }
+
+          &.f {
+            right: -13px;
+            top: 66px;
+            transform: rotate(18deg);
+            width: 20px;
+            height: 24px;
+          }
+
+          &.g {
+            top: -50px;
+            right: -50px;
+          }
+
+          &.h {
+            bottom: 180px;
+            right: -80px;
+          }
+
+          &.j {
+            bottom: 70px;
+            left: 20px;
+          }
+
+          &.k {
+            bottom: 170px;
+            left: 19px;
+            width: 21px;
+            height: 25px;
+          }
+
+          &.l {
+            bottom: 180px;
+            left: 51px;
+            width: 30px;
+            height: 35px;
+            transform: rotate(14deg);
+          }
+
+          &.m {
+            bottom: 164px;
+            left: 89px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 21%;
+          left: 3px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .clouds {
+      height: 210px;
+    }
+    .container {
+      padding: 65px 10px 0;
+      flex-direction: column;
+      gap: 50px;
+
+      .left {
+        display: flex;
+        align-items: baseline;
+
+        h1 {
+          font-size: 30px;
+          max-width: 300px;
+          text-align: left;
+        }
+
+        &__benefits {
+          gap: 10px;
+
+          &__icon {
+            font-size: 16px;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .button {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+      }
+
+      .right {
+        .girl {
+          width: 240px;
+          height: 300px;
+        }
+
+        .speech_bubble {
+          bottom: 55%;
+          right: -16px;
+          width: 50px;
+          height: 30px;
+        }
+
+        .note {
+          width: 110px;
+          height: 90px;
+          left: -35px;
+        }
+
+        .star {
+          &.b {
+            left: -22px;
+            bottom: 31px;
+            height: 25px;
+            width: 20px;
+          }
+
+          &.c {
+            top: -25px;
+            left: -57px;
+            display: none;
+          }
+
+          &.d {
+            top: -4px;
+            left: 74px;
+          }
+
+          &.e {
+            top: -21px;
+            right: 51px;
+          }
+
+          &.f {
+            right: 0px;
+            top: 61px;
+            transform: rotate(18deg);
+            width: 20px;
+            height: 24px;
+          }
+
+          &.g {
+            display: none;
+            top: -50px;
+            right: -50px;
+          }
+
+          &.h {
+            display: none;
+            bottom: 180px;
+            right: -80px;
+          }
+
+          &.i {
+            display: none;
+          }
+
+          &.j {
+            bottom: 54px;
+            left: 5px;
+            height: 13px;
+            width: 12px;
+          }
+
+          &.k {
+            bottom: 150px;
+            left: 5px;
+            width: 15px;
+            height: 15px;
+          }
+
+          &.l {
+            bottom: 150px;
+            left: 40px;
+            width: 20px;
+            height: 25px;
+            transform: rotate(14deg);
+          }
+
+          &.m {
+            bottom: 130px;
+            left: 70px;
+          }
+        }
+      }
+
+      .star {
+        &.a {
+          top: 26%;
+          left: 3px;
+        }
+      }
+    }
+  }
 }

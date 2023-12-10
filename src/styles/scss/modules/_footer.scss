@@ -58,10 +58,12 @@ footer {
 
       .call {
         display: flex;
+        justify-content: end;
 
         &__container {
           display: flex;
           flex-direction: column;
+          align-items: end;
 
           a {
             text-decoration: none;
@@ -174,6 +176,8 @@ footer {
           }
 
           &__container {
+            align-items: end;
+
             a {
               span {
                 span {
