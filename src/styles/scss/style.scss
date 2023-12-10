@@ -411,31 +411,48 @@ body {
         }
 
         .star {
+          &.c {
+            top: -25px;
+            left: -57px;
+            display: none;
+          }
+
+          &.d {
+            top: -25px;
+            left: 115px;
+          }
+
           &.b {
-            left: -120px;
+            left: -50px;
+            bottom: 10px;
+          }
+
+          &.j {
+            bottom: 50px;
+            left: 5px;
           }
 
           &.k {
-            bottom: 220px;
-            left: 37px;
+            bottom: 204px;
+            left: 17px;
           }
 
           &.l {
-            bottom: 245px;
-            left: 90px;
+            bottom: 239px;
+            left: 77px;
           }
 
           &.m {
-            bottom: 218px;
-            left: 148px;
+            bottom: 224px;
+            left: 140px;
           }
         }
       }
 
       .star {
         &.a {
-          top: 23%;
-          left: 75px;
+          top: 14%;
+          left: 32px;
         }
       }
     }
