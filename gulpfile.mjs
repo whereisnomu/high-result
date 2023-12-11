@@ -17,7 +17,7 @@ import { deleteAsync as del } from "del";
 
 import csso from "gulp-csso";
 
-import imagemin from "gulp-imagemin";
+import imagemin, { optipng, mozjpeg } from "gulp-imagemin";
 
 const sass = gulpSass(dartSass);
 browserSync.create();
@@ -70,7 +70,7 @@ gulp.task("sass", function (callback) {
 gulp.task("copy:img", function (callback) {
   return gulp
     .src("./src/img/**/*.*")
-    .pipe(imagemin())
+    .pipe(imagemin([optipng({ optimizationLevel: 5 })]))
     .pipe(gulp.dest("./build/img/"));
   callback();
 });

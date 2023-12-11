@@ -58,6 +58,36 @@ body {
     color: #fff;
     cursor: pointer;
   }
+
+  .h2 {
+    font-family: ComicCat;
+    font-size: 42px;
+    color: $dark;
+    span {
+      color: $green;
+    }
+
+    @media (max-width: $lscreen) {
+      font-size: 34px;
+    }
+
+    @media (max-width: $notebooks) {
+      font-size: 30px;
+      max-width: 380px;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 30px;
+      max-width: 380px;
+      text-align: left;
+    }
+  }
 }
 
 .containerPackage {
@@ -91,5 +121,7 @@ body {
 @import "./modules/header";
 
 @import "./modules/mainscreen";
+
+@import "./modules/cta";
 
 @import "./modules/footer";

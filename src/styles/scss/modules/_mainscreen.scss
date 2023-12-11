@@ -8,6 +8,8 @@
   position: relative;
   min-width: 320px;
 
+  margin-bottom: 10px;
+
   .clouds {
     display: flex;
     height: 263px;
@@ -58,7 +60,7 @@
 
       h1 {
         font-family: ComicCat;
-        font-size: 42px;
+        font-size: 48px;
         color: $dark;
         span {
           color: $green;

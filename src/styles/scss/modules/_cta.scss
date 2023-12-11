@@ -1,0 +1,208 @@
+#cta {
+  width: 100vw;
+  overflow-x: hidden;
+  align-items: center;
+  background-color: $w;
+
+  display: flex;
+  position: relative;
+  min-width: 320px;
+
+  .cta__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    .cta {
+      .text {
+        img {
+          position: absolute;
+          right: 0;
+          bottom: -130px;
+          transform: rotate(3deg);
+          height: 150px;
+        }
+      }
+    }
+
+    .class {
+      width: 100vw;
+      min-width: 320px;
+    }
+  }
+
+  .oval,
+  .puddle,
+  .shape {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .oval {
+    left: -50px;
+    bottom: 25%;
+  }
+
+  .puddle {
+    right: 0;
+    bottom: 25%;
+  }
+
+  .shape {
+    right: 100px;
+    top: 35%;
+  }
+
+  @media (max-width: $lscreen) {
+    .cta__container {
+      .cta {
+        .text {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .oval {
+      left: -100px;
+      bottom: 25%;
+    }
+
+    .puddle {
+      right: -100px;
+      bottom: 15%;
+    }
+
+    .shape {
+      right: 99px;
+      top: 41%;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .cta__container {
+      .cta {
+        .text {
+          font-size: 24px;
+
+          img {
+            position: absolute;
+            right: 0;
+            bottom: -130px;
+            transform: rotate(3deg);
+            height: 150px;
+          }
+        }
+
+        form {
+          max-width: 320px;
+          input:not(input[type="checkbox"]) {
+            padding: 10px 20px;
+          }
+
+          .button {
+            padding: 10px 36px;
+          }
+        }
+      }
+    }
+
+    .oval {
+      left: -150px;
+      bottom: 12%;
+    }
+
+    .puddle {
+      right: -400px;
+      bottom: 5%;
+    }
+
+    .shape {
+      right: 99px;
+      top: 48%;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .cta__container {
+      .cta {
+        flex-direction: column;
+        .text {
+          font-size: 20px;
+          top: 0;
+
+          img {
+            position: absolute;
+            left: -125px;
+            bottom: -235px;
+            transform: rotate(51deg);
+            height: 150px;
+          }
+        }
+      }
+    }
+
+    .oval {
+      left: -50px;
+      bottom: 11%;
+      width: 200px;
+    }
+
+    .puddle {
+      right: 0;
+      bottom: 8%;
+      width: 400px;
+    }
+
+    .shape {
+      right: 68px;
+      top: 62%;
+      width: 40px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .cta__container {
+      .cta {
+        flex-direction: column;
+        .text {
+          font-size: 20px;
+          top: 0;
+          padding: 0 5px;
+
+          img {
+            display: none;
+          }
+        }
+
+        form {
+          max-width: 300px;
+
+          .checkbox {
+            input[type="checkbox"] {
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+
+    .oval {
+      left: -30px;
+      bottom: 11%;
+      width: 125px;
+    }
+
+    .puddle {
+      right: -30px;
+      bottom: 8%;
+      width: 250px;
+    }
+
+    .shape {
+      right: 20px;
+      top: 70%;
+      width: 25px;
+    }
+  }
+}
