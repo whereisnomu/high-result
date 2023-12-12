@@ -149,5 +149,32 @@
         }
       }
     }
+
+    .beige {
+      top: 93px;
+      left: 2px;
+      z-index: -1;
+      width: 45px;
+    }
+
+    .sbeige {
+      top: 50px;
+      left: 65px;
+      width: 58px;
+    }
+
+    .smallshape {
+      top: 75px;
+      right: 25px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .whiteshape {
+      right: 55px;
+      top: 107px;
+      z-index: -1;
+      width: 36px;
+    }
   }
 }

@@ -118,6 +118,66 @@ body {
   flex-direction: column;
 }
 
+#ctamethods {
+  background-color: $whitegreen;
+  padding: 10px 0 200px;
+  position: relative;
+  z-index: 10;
+
+  .cta {
+    position: relative;
+    z-index: 3;
+  }
+
+  .oval {
+    top: 52px;
+    left: calc(225px + 60px);
+  }
+
+  .bp {
+    right: 0;
+    // top: 0;
+  }
+
+  .bs {
+    left: 63px;
+  }
+  .bsp,
+  .bp,
+  .bs,
+  .oval {
+    position: absolute;
+    z-index: 2;
+  }
+
+  @media (max-width: $lscreen) {
+    .oval {
+      top: 52px;
+      left: 142px;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .oval {
+      top: 14px;
+      left: 30px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .oval {
+      top: 0;
+      left: 31px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .oval {
+      width: 150px;
+    }
+  }
+}
+
 @import "./modules/header";
 
 @import "./modules/mainscreen";
