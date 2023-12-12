@@ -1,8 +1,21 @@
+include ../mixins/card.pug
+
+include ../../utils/cardsData.pug
+
 sectiom#aboutmethods
    .text
       h2.h2 Основа успеха - авторские 
          span методики Нины Тумановой
       small Методики, рассчитанные на быстрый результат!
+   
+   .cards
+      each card in cards 
+         +card(card.num, card.text, card.img, card.rotate)
+
+
+
    img(src="../../img/about_methods/vectors/top/puddle_top.svg", alt="puddle_top").cloud
    img(src="../../img/about_methods/vectors/top/wsshape.svg", alt="small shape").smallshape
    img(src="../../img/about_methods/vectors/top/wshape.svg", alt="white shape").whiteshape
+   img(src="../../img/about_methods/vectors/top/bsshape.svg", alt="beige small shape").sbeige
+   img(src="../../img/about_methods/vectors/top/bshape.svg", alt="beige shape").beige
