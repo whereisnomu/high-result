@@ -85,7 +85,7 @@ body {
     @media (max-width: $mobile) {
       font-size: 30px;
       max-width: 380px;
-      text-align: left;
+      text-align: left !important;
     }
   }
 }
@@ -118,10 +118,52 @@ body {
   flex-direction: column;
 }
 
+#aboutmethods {
+  padding: 100px 140px 80px;
+  background-color: $whitegreen;
+  position: relative;
+  z-index: 1;
+
+  .text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .h2 {
+      max-width: 550px;
+    }
+
+    small {
+      font-size: 18px;
+      font-weight: 400;
+      color: $dark;
+    }
+  }
+
+  .cloud,
+  .smallshape,
+  .whiteshape {
+    z-index: 2;
+    position: absolute;
+  }
+
+  .smallshape {
+    top: 65px;
+    right: 82px;
+  }
+
+  .cloud {
+    right: 0;
+    top: 0;
+  }
+}
+
 @import "./modules/header";
 
 @import "./modules/mainscreen";
 
 @import "./modules/cta";
+
+@import "./modules/benefits";
 
 @import "./modules/footer";

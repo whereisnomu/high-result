@@ -1,0 +1,175 @@
+#benefits {
+  display: flex;
+  flex-direction: column;
+  background-color: $w;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 140px;
+
+  h2 {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .benefits {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+
+    .box {
+      background-color: $greenbox;
+      align-items: center;
+
+      .benefiticons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+  .benefitbox {
+    &__container {
+      .mark {
+        .text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .benefits {
+      .box {
+        gap: 20px;
+        padding: 40px;
+        justify-content: center;
+
+        .benefiticon {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .benefitbox {
+        .header {
+          font-size: 24px;
+          margin-bottom: 25px;
+        }
+
+        &__container {
+          .mark {
+            .text {
+              max-width: 400px;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 40px 100px;
+
+    .benefits {
+      flex-direction: column;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .benefiticon {
+          span {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .benefitbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 40px 60px;
+
+    .benefits {
+      flex-direction: column;
+    }
+
+    .benefitbox {
+      .header {
+        font-size: 24px;
+        margin-bottom: 25px;
+      }
+
+      &__container {
+        .mark {
+          .text {
+            max-width: 400px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 40px;
+
+    .benefits {
+      .box {
+        .benefiticon {
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 25px 10px;
+    .benefits {
+      .box {
+        padding: 20px;
+
+        .benefiticon {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+          span {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .benefitbox {
+        padding: 20px;
+
+        .header {
+          font-size: 22px;
+        }
+
+        &__container {
+          .mark {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

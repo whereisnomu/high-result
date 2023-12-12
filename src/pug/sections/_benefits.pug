@@ -1,0 +1,13 @@
+include ../mixins/benefitbox.pug
+
+include ../../utils/benefitsData.pug
+
+section#benefits 
+   h2.h2 Франшиза от Нины Тумановой, 
+      span для тех, кому важна не только прибыль!
+   .benefits
+      .box 
+         .benefiticons
+            each benefit in benefits
+               +benefiticon(benefit.text, benefit.img)
+      +benefitbox("С 2016 года нас выбирают за то, что мы:", benefitsMarks)
