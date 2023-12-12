@@ -1,0 +1,153 @@
+#aboutmethods {
+  padding: 100px 140px 80px;
+  background-color: $whitegreen;
+  position: relative;
+  z-index: 1;
+  min-width: 320px;
+  overflow-x: hidden;
+
+  .text {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .h2 {
+      max-width: 550px;
+    }
+
+    small {
+      font-size: 18px;
+      font-weight: 400;
+      color: $dark;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1440px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .cloud,
+  .smallshape,
+  .whiteshape,
+  .sbeige,
+  .beige {
+    z-index: 2;
+    position: absolute;
+  }
+
+  .sbeige {
+    top: 35px;
+    left: 192px;
+  }
+
+  .beige {
+    top: 82px;
+    left: 85px;
+    z-index: -1;
+  }
+
+  .whiteshape {
+    right: 205px;
+    top: 112px;
+    z-index: -1;
+  }
+
+  .smallshape {
+    top: 65px;
+    right: 82px;
+  }
+
+  .cloud {
+    right: 0;
+    top: 0;
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 100px 100px 80px;
+
+    .text {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 100px 60px 80px;
+
+    .text {
+      .h2 {
+        max-width: 500px;
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: 100px 40px 80px;
+
+    .text {
+      .h2 {
+        max-width: none;
+        text-align: left;
+        max-width: 500px;
+      }
+    }
+
+    .beige {
+      top: 82px;
+      left: 15px;
+      z-index: -1;
+    }
+
+    .sbeige {
+      top: 35px;
+      left: 100px;
+    }
+
+    .smallshape {
+      top: 65px;
+      right: 90px;
+      width: 39px;
+      height: 39px;
+    }
+
+    .whiteshape {
+      right: 150px;
+      top: 112px;
+      z-index: -1;
+      width: 65px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 100px 10px 80px;
+
+    .text {
+      .h2 {
+        max-width: none;
+        text-align: left;
+      }
+    }
+
+    .cards {
+      .card {
+        &__container {
+          .bottom {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

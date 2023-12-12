@@ -118,75 +118,6 @@ body {
   flex-direction: column;
 }
 
-#aboutmethods {
-  padding: 100px 140px 80px;
-  background-color: $whitegreen;
-  position: relative;
-  z-index: 1;
-
-  .text {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-bottom: 70px;
-
-    .h2 {
-      max-width: 550px;
-    }
-
-    small {
-      font-size: 18px;
-      font-weight: 400;
-      color: $dark;
-    }
-  }
-
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1440px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cloud,
-  .smallshape,
-  .whiteshape,
-  .sbeige,
-  .beige {
-    z-index: 2;
-    position: absolute;
-  }
-
-  .sbeige {
-    top: 35px;
-    left: 192px;
-  }
-
-  .beige {
-    top: 82px;
-    left: 85px;
-    z-index: -1;
-  }
-
-  .whiteshape {
-    right: 205px;
-    top: 112px;
-    z-index: -1;
-  }
-
-  .smallshape {
-    top: 65px;
-    right: 82px;
-  }
-
-  .cloud {
-    right: 0;
-    top: 0;
-  }
-}
-
 @import "./modules/header";
 
 @import "./modules/mainscreen";
@@ -194,5 +125,7 @@ body {
 @import "./modules/cta";
 
 @import "./modules/benefits";
+
+@import "./modules/aboutmethods";
 
 @import "./modules/footer";
