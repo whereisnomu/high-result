@@ -76,7 +76,7 @@ gulp.task("copy:img", function (callback) {
 });
 
 gulp.task("copy:js", function (callback) {
-  return gulp.src("./src/js/**/*.js").pipe(gulp.dest("./build/js/"));
+  return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
   callback();
 });
 

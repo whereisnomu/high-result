@@ -113,67 +113,69 @@ body {
   }
 }
 
-.slider {
+// .slider {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+#fourbenefits {
   display: flex;
   flex-direction: column;
-}
-
-#ctamethods {
+  align-items: center;
+  justify-content: center;
   background-color: $whitegreen;
-  padding: 10px 0 200px;
-  position: relative;
-  z-index: 10;
+  width: 100%;
+  padding: 0 0 120px;
 
-  .cta {
+  .h2 {
+    text-align: center;
+    max-width: 592px;
+    margin-bottom: 40px;
+  }
+
+  .splide {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    z-index: 3;
-  }
+    width: 100%;
+    max-width: 960px;
+    z-index: 10;
 
-  .oval {
-    top: 52px;
-    left: calc(225px + 60px);
-  }
+    &__arrows {
+      position: relative;
 
-  .bp {
-    right: 0;
-    // top: 0;
-  }
+      .splide__arrow {
+        &.splide__arrow--prev {
+          position: absolute;
+          top: 256px;
+          left: -100px;
+        }
 
-  .bs {
-    left: 63px;
-  }
-  .bsp,
-  .bp,
-  .bs,
-  .oval {
-    position: absolute;
-    z-index: 2;
-  }
-
-  @media (max-width: $lscreen) {
-    .oval {
-      top: 52px;
-      left: 142px;
+        &.splide__arrow--next {
+          position: absolute;
+          top: 256px;
+          right: -100px;
+        }
+      }
     }
-  }
 
-  @media (max-width: $notebooks) {
-    .oval {
-      top: 14px;
-      left: 30px;
+    &__list {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
     }
-  }
 
-  @media (max-width: $tablet) {
-    .oval {
-      top: 0;
-      left: 31px;
-    }
-  }
+    &__pagination {
+      li {
+        button {
+          border: 1px solid $green;
+          background-color: $w;
 
-  @media (max-width: $mobile) {
-    .oval {
-      width: 150px;
+          &.is-active {
+            background-color: $green;
+          }
+        }
+      }
     }
   }
 }
@@ -187,5 +189,7 @@ body {
 @import "./modules/benefits";
 
 @import "./modules/aboutmethods";
+
+@import "./modules/ctamethods";
 
 @import "./modules/footer";
