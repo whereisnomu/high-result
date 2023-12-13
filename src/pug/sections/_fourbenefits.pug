@@ -11,22 +11,19 @@ section#fourbenefits
    section.splide(aria-label='Basic Structure Example')
       .splide__arrows
          button.splide__arrow.splide__arrow--prev 
-            img(src="../../img/four_benefits/slider/LArrow.svg")
+            img(src="./img/four_benefits/slider/LArrow.svg")
          button.splide__arrow.splide__arrow--next
-            img(src="../../img/four_benefits/slider/RArrow.svg")
-      
-      //- ul.splide__pagination.splide__pagination--ltr(role='tablist', aria-label='Select a slide to show')
-      //-    li(role='presentation')
-      //-       button.splide__pagination__page.is-active(type='button', role='tab', aria-controls='splide01-slide01', aria-label='Go to slide 1', aria-selected='true').
-      
-      //-       li(role='presentation')
-      //-          button.splide__pagination__page(type='button', role='tab', aria-controls='splide01-slide02', aria-label='Go to slide 2', tabindex='-1').
+            img(src="./img/four_benefits/slider/RArrow.svg")
 
       .splide__track
          ul.splide__list
             each slide in slider
-               li(data-splide-interval="5000").splide__slide
+               li(data-splide-interval="10000").splide__slide
                   +slide(slide.num, slide.title, slide.description, slide.paragraph, slide.img, slide.marks, slide.hstyle)
+
+   img(src="./img/four_benefits/vectors/bshape.svg").bs
+   img(src="./img/four_benefits/vectors/bsshape.svg").bss
+   img(src="./img/four_benefits/vectors/bpuddle.svg").bp
 
 
 

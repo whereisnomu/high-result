@@ -1,0 +1,103 @@
+#packages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px 100px;
+  background-color: $whitegreen;
+
+  .h2 {
+    margin-bottom: 40px;
+    z-index: 10;
+  }
+
+  .containerPackage {
+    display: flex;
+    gap: 40px;
+
+    .package {
+      align-self: start;
+      z-index: 10;
+
+      .head {
+        gap: 14px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .containerPackage {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .containerPackage {
+      .package {
+        .head {
+          gap: 10px;
+
+          h3 {
+            font-size: 22px;
+          }
+
+          h4 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .containerPackage {
+      flex-direction: column;
+      gap: 40px;
+
+      .package {
+        .head {
+          gap: 10px;
+
+          h3 {
+            font-size: 22px;
+          }
+
+          h4 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0 10px 100px;
+    .containerPackage {
+      flex-direction: column;
+
+      .package {
+        .head {
+          gap: 10px;
+
+          h3 {
+            font-size: 20px;
+          }
+
+          h4 {
+            font-size: 14px;
+          }
+        }
+
+        .info {
+          .item {
+            h6 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
