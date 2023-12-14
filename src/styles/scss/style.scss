@@ -90,6 +90,88 @@ body {
   }
 }
 
+#whatsincluded {
+  padding: 100px 140px;
+
+  .h2 {
+    margin-bottom: 40px;
+  }
+
+  .whatscontainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      justify-content: space-between;
+
+      .included {
+        width: 100%;
+        max-width: 460px;
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .whatscontainer {
+      flex-direction: row;
+      .right {
+        justify-content: flex-start;
+
+        .included {
+          max-width: 440px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    .whatscontainer {
+      flex-direction: column-reverse;
+      .right {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .included {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $notebooks) {
+    .whatscontainer {
+      flex-direction: column-reverse;
+      .right {
+        flex-direction: row;
+        justify-content: center;
+
+        .included {
+          max-width: 230px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet) {
+    .whatscontainer {
+      flex-direction: column;
+      .right {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .included {
+          max-width: 230px;
+        }
+      }
+    }
+  }
+}
+
 @import "./modules/header";
 
 @import "./modules/mainscreen";
