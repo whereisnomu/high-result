@@ -1,4 +1,6 @@
 @import "./../variables";
+@import "../components/burger";
+
 header {
   display: flex;
   padding: 8px 140px;
@@ -22,10 +24,6 @@ header {
     width: 100%;
     height: 100%;
     //  background-color: #313d49;
-  }
-
-  .burger {
-    display: none;
   }
 
   .navigation {
@@ -148,54 +146,58 @@ header {
       overflow: hidden; /*блокировать скролл при открытии меню*/
     }
 
-    .burger {
-      display: block !important;
-      position: relative;
-      z-index: 3;
-      width: 30px;
-      height: 20px;
-    }
+    //.burger {
+    //  display: block;
+    //}
 
-    .burger:before,
-    .burger:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      background-color: #000;
-      width: 100%;
-      height: 3px;
-      transition: all 0.3s ease;
-    }
-
-    .burger:before {
-      top: 0;
-    }
-
-    .burger:after {
-      bottom: 0;
-    }
-
-    .burger span {
-      position: absolute;
-      left: 0;
-      top: 9px;
-      background-color: #000;
-      width: 100%;
-      height: 3px;
-      transition: all 0.3s ease;
-    }
-
-    &.active:before {
-      transform: rotate(45deg);
-      top: 9px;
-    }
-    &.active:after {
-      transform: rotate(-45deg);
-      bottom: 9px;
-    }
-    &.active span {
-      transform: scale(0);
-    }
+    //.burger {
+    //  display: block !important;
+    //  position: relative;
+    //  z-index: 3;
+    //  width: 30px;
+    //  height: 20px;
+    //}
+    //
+    //.burger:before,
+    //.burger:after {
+    //  content: "";
+    //  position: absolute;
+    //  left: 0;
+    //  background-color: #000;
+    //  width: 100%;
+    //  height: 3px;
+    //  transition: all 0.3s ease;
+    //}
+    //
+    //.burger:before {
+    //  top: 0;
+    //}
+    //
+    //.burger:after {
+    //  bottom: 0;
+    //}
+    //
+    //.burger span {
+    //  position: absolute;
+    //  left: 0;
+    //  top: 9px;
+    //  background-color: #000;
+    //  width: 100%;
+    //  height: 3px;
+    //  transition: all 0.3s ease;
+    //}
+    //
+    //&.active:before {
+    //  transform: rotate(45deg);
+    //  top: 9px;
+    //}
+    //&.active:after {
+    //  transform: rotate(-45deg);
+    //  bottom: 9px;
+    //}
+    //&.active span {
+    //  transform: scale(0);
+    //}
 
     .navigation {
       flex-direction: column;

@@ -4,7 +4,7 @@
 
 @import "./variables";
 
-@import "./mixins";
+@import "./components";
 
 @import "./fonts";
 
@@ -90,23 +90,28 @@ body {
   }
 }
 
-#whatsincluded {
+#whats_included {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 100px 140px;
 
   .h2 {
     margin-bottom: 40px;
   }
 
-  .whatscontainer {
+  .whats_container {
     display: flex;
     justify-content: center;
     gap: 30px;
 
-    .right {
+    .pictures {
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      row-gap: 30px;
       justify-content: space-between;
+      max-width: 460px;
+      width: 100%;
 
       .included {
         width: 100%;
@@ -116,76 +121,51 @@ body {
   }
 
   @media (max-width: $sxga) {
-    .whatscontainer {
-      flex-direction: row;
-      .right {
-        justify-content: flex-start;
+    .whats_container {
+      flex-direction: column;
+
+      .info {
+        order: 2;
+      }
+
+      .pictures {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: unset;
 
         .included {
-          max-width: 440px;
+          max-width: calc(50% - 15px)
         }
       }
     }
   }
 
   @media (max-width: $lscreen) {
-    .whatscontainer {
-      flex-direction: column-reverse;
-      .right {
-        flex-direction: row;
-        justify-content: space-between;
-
-        .included {
-          max-width: 350px;
-        }
-      }
-    }
+    padding: 40px 100px;
   }
 
   @media (max-width: $notebooks) {
-    .whatscontainer {
-      flex-direction: column-reverse;
-      .right {
-        flex-direction: row;
-        justify-content: center;
-
-        .included {
-          max-width: 230px;
-        }
-      }
-    }
+    padding: 40px 60px;
   }
 
   @media (max-width: $tablet) {
-    .whatscontainer {
-      flex-direction: column;
-      .right {
-        flex-direction: row;
-        justify-content: center;
+    padding: 40px;
+
+    .whats_container {
+      .pictures {
         flex-wrap: wrap;
+        order: 2;
 
         .included {
-          max-width: 230px;
+          max-width: 100%;
         }
       }
     }
   }
+
+  @media (max-width: $mobile) {
+    padding: 25px 10px;
+  }
 }
 
-@import "./modules/header";
-
-@import "./modules/mainscreen";
-
-@import "./modules/cta";
-
-@import "./modules/benefits";
-
-@import "./modules/aboutmethods";
-
-@import "./modules/ctamethods";
-
-@import "./modules/fourbenefits";
-
-@import "./modules/packages";
-
-@import "./modules/footer";
+@import "./modules";

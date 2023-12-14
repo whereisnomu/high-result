@@ -1,0 +1,11 @@
+.benefiticon {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  span {
+    color: $grey;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}

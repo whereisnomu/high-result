@@ -1,9 +1,10 @@
-include form.pug
-mixin popup
-   .popup
+include form
+mixin cta
+   .cta
       .text
          span 
             span.orange Оставьте заявку, 
             br
             span чтобы получить консультацию и презентацию проекта
+         img(src="./img/cta/vectors/arrow.svg", alt="arrow" width=150 height=120)
       +form

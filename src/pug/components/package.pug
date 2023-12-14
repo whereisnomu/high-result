@@ -1,0 +1,32 @@
+include button
+include ../../utils/packageData
+
+mixin package(data)
+   each element, index in packageData
+      each category in categories
+         .head(class=element.button === 'yes' ? "green" : "orange" class="block" style="grid-area: hd" + (index + 1))
+            h3=element.title
+            h4=element.description
+         .content(class="block" style="grid-area: ct" + (index + 1))
+            .info
+               .item
+                  h5=category.room
+                  h6=element.room
+               .item
+                  h5=category.service
+                  h6=element.service
+               .item
+                  h5=category.staff
+                  h6=element.staff
+               .item
+                  h5=category.investment
+                  h6.invest=element.investment
+               .item
+                  h5=category.fee
+                  ul
+                     each point in element.fee
+                        li=point
+               .item
+                  h5=category.payback
+                  h6=element.payback
+            +button('https://google.com', 'Оставить заявку', element.button)

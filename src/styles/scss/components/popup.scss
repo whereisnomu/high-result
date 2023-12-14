@@ -1,0 +1,40 @@
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 20px;
+  flex-direction: column;
+  padding: 70px;
+  background-color: $whitegreen;
+  border-radius: 6px;
+
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: "X";
+    top: 24px;
+    right: 32px;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .text {
+    position: relative;
+    max-width: 360px;
+    font-size: 24px;
+    flex-direction: column;
+    z-index: 2;
+    text-align: center;
+
+    span {
+      font-weight: 500;
+      color: $dark;
+
+      .orange {
+        color: $orange;
+        font-weight: 600;
+      }
+    }
+  }
+}

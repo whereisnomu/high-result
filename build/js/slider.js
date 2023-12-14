@@ -4,7 +4,7 @@ new Splide(".splide", {
   perPage: 1,
   autoplay: true,
   rewindSpeed: 5000,
-  speed: 2500,
+  speed: 1250,
   gap: "30px",
   breakpoints: {
     768: {

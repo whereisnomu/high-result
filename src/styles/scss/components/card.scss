@@ -1,0 +1,41 @@
+.card {
+  background-color: $w;
+  padding: 6px;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 360px;
+  max-height: 252px;
+  height: 252px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 18px;
+    border: 2px dashed $bordercard;
+    height: 238px;
+    justify-content: space-between;
+
+    .top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      span {
+        color: $grey;
+      }
+    }
+
+    .bottom {
+      max-width: 320px;
+      color: $dark;
+      align-items: flex-end;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
