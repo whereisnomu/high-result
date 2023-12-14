@@ -1,14 +1,14 @@
-include ../mixins/benefitbox.pug
+include ../components/benefitbox.pug
 
 include ../../utils/whatsincludedData.pug
 
-section#whatsincluded
+section#whats_included
    h2.h2 Что входит 
       span в франшизу
 
-   .whatscontainer
-      .left
+   .whats_container
+      .info
          +benefitbox('Мы оказываем полноценную поддержку и контролируем запуск и работу центра:', whatsIncluded)
-      .right 
+      .pictures
          img(src="../../img/whats_included/1.png", alt="office").included
          img(src="../../img/whats_included/2.png", alt="office").included

@@ -1,0 +1,20 @@
+.mark {
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  gap: 14px;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+    font-size: 18px;
+
+    .title {
+      font-weight: 700;
+    }
+    .reqular {
+      font-weight: 400;
+    }
+  }
+}

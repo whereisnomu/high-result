@@ -1,9 +1,9 @@
-include button.pug 
+include button
 
-mixin form(action="404")
+mixin form()
    form(action=action)
-      input(type="text" placeholder="Имя" autocomplete='given-name') 
-      input(type="phone" placeholder="+ 7 (___) ___-___-__" autocomplete='tel')
+      input(type="text" placeholder="Имя" autocomplete='given-name' required)
+      input(type="phone" class="phone" placeholder="+ 7 (___) ___-__-__" required)
       input(type="email" placeholder="E-mail" autocomplete='email')
       button(type='submit').button.green Оставить завку
       .checkbox
