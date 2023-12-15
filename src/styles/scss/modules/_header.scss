@@ -9,13 +9,11 @@ header {
   width: 100%;
   align-items: center;
   z-index: 50;
-  position: fixed; /*фиксируем шапку вверху экрана*/
+  position: fixed;
   top: 0;
   left: 0;
-  //   max-width: 1400px;
 
   &:before {
-    /*делаем плашку, которая перекроет меню в адаптиве*/
     content: "";
     position: absolute;
     top: 0;
@@ -23,7 +21,6 @@ header {
     z-index: 2;
     width: 100%;
     height: 100%;
-    //  background-color: #313d49;
   }
 
   .navigation {
@@ -136,80 +133,26 @@ header {
 
   @media (max-width: $tablet) {
     justify-content: flex-end;
-    padding: 15px 10px;
+    padding: 20px 10px;
 
     .button {
       display: none;
     }
 
     .lock {
-      overflow: hidden; /*блокировать скролл при открытии меню*/
+      overflow: hidden;
     }
-
-    //.burger {
-    //  display: block;
-    //}
-
-    //.burger {
-    //  display: block !important;
-    //  position: relative;
-    //  z-index: 3;
-    //  width: 30px;
-    //  height: 20px;
-    //}
-    //
-    //.burger:before,
-    //.burger:after {
-    //  content: "";
-    //  position: absolute;
-    //  left: 0;
-    //  background-color: #000;
-    //  width: 100%;
-    //  height: 3px;
-    //  transition: all 0.3s ease;
-    //}
-    //
-    //.burger:before {
-    //  top: 0;
-    //}
-    //
-    //.burger:after {
-    //  bottom: 0;
-    //}
-    //
-    //.burger span {
-    //  position: absolute;
-    //  left: 0;
-    //  top: 9px;
-    //  background-color: #000;
-    //  width: 100%;
-    //  height: 3px;
-    //  transition: all 0.3s ease;
-    //}
-    //
-    //&.active:before {
-    //  transform: rotate(45deg);
-    //  top: 9px;
-    //}
-    //&.active:after {
-    //  transform: rotate(-45deg);
-    //  bottom: 9px;
-    //}
-    //&.active span {
-    //  transform: scale(0);
-    //}
 
     .navigation {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      // gap: 40px;
       position: fixed;
       top: -100%;
       left: 0;
       width: 100%;
       height: 100%;
-      overflow: auto; /*Чтобы появился скролл у меню, если оно длиннее экрана*/
+      overflow: auto;
       transition: all 0.3s ease;
       z-index: 1;
 

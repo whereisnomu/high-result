@@ -1,0 +1,100 @@
+#whats_included {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 140px;
+
+  .h2 {
+    margin-bottom: 40px;
+  }
+
+  .whats_container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .pictures {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      justify-content: space-between;
+      max-width: 460px;
+      width: 100%;
+
+      .included {
+        width: 100%;
+        max-width: 460px;
+      }
+    }
+  }
+
+  @media (max-width: $sxga) {
+    .whats_container {
+      flex-direction: column;
+
+      .info {
+        order: 2;
+      }
+
+      .pictures {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: unset;
+
+        .included {
+          max-width: calc(50% - 15px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $lscreen) {
+    padding: 40px 100px;
+  }
+
+  @media (max-width: $notebooks) {
+    padding: 40px 60px 100px;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 40px 40px 60px;
+
+    .whats_container {
+      .info {
+        .benefitbox {
+          padding: 20px;
+
+          .header {
+            font-size: 23px;
+          }
+        }
+      }
+
+      .pictures {
+        flex-wrap: wrap;
+        order: 2;
+
+        .included {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 25px 10px 60px;
+
+    .whats_container {
+      .info {
+        .benefitbox {
+          padding: 20px;
+
+          .header {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
