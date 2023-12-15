@@ -1,7 +1,7 @@
 mixin button(link, name, green = "yes")
    if (green == 'yes')
-      a(href=link role="button" type='submit').button.green
+      a(href=link role="button").button.green
          span #{name} 
    else 
-      a(href=link role="button" type='submit').button.orange
+      a(href=link role="button").button.orange
          span #{name} 

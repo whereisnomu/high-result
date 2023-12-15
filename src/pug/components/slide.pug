@@ -4,9 +4,12 @@ mixin slide(num='./img/four_benefits/slider/1/num.svg', title='Востребо�
    .slide
       .slide__container
          img(src=num, alt="" + title width=80 height=80)
-         h3 #{title}
-         h4 #{description}
-         h5(style=hstyle) #{paragraph}
+         if(title)
+            h3 #{title}
+         if(description)
+            h4 #{description}
+         if(paragraph)
+            h5(style=hstyle) #{paragraph}
          each mark in marks
             +mark('', mark)
-      img(src=img, alt="" + title).img
+      img(src=img, alt="" + title loading='lazy').img

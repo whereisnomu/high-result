@@ -30,13 +30,13 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 2;
 
     .left {
       display: flex;
       flex-direction: column;
       gap: 30px;
       max-width: 540px;
+      z-index: 15;
 
       &__benefits {
         display: flex;

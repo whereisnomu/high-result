@@ -1,5 +1,5 @@
 include form
-mixin cta
+mixin cta(idname)
    .cta
       .text
          span 
@@ -7,4 +7,4 @@ mixin cta
             br
             span чтобы получить консультацию и презентацию проекта
          img(src="./img/cta/vectors/arrow.svg", alt="arrow" width=150 height=120)
-      +form
+      +form(idname)

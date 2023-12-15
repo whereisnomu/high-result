@@ -1,13 +1,13 @@
 include button
 
-mixin form()
-   form(action=action)
+mixin form(idname='check1')
+   form(action='https://google.com')
       input(type="text" placeholder="Имя" autocomplete='given-name' required)
-      input(type="phone" class="phone" placeholder="+ 7 (___) ___-__-__" required)
-      input(type="email" placeholder="E-mail" autocomplete='email')
+      input(type="tel" class="phone" placeholder="+ 7 (___) ___-__-__" required)
+      input(type="email" placeholder="E-mail" autocomplete='email' required)
       button(type='submit').button.green Оставить завку
       .checkbox
-         input(type="checkbox" name='check' id='check' value='yes')
-         label(for="check")
+         input(type="checkbox" name='check' id='' + idname value='' required)
+         label(for="" + idname)
             span Заполняя форму на сайте, вы соглашаетесь на обработку персональных данных, а также с нашей 
                a(href="#") Политикой конфиденциальности

@@ -2,7 +2,7 @@ include ../components/card.pug
 
 include ../../utils/cardsData.pug
 
-sectiom#aboutmethods
+section#aboutmethods
    .text
       h2.h2 Основа успеха - авторские 
          span методики Нины Тумановой
@@ -10,7 +10,7 @@ sectiom#aboutmethods
    
    .cards
       each card in cards 
-         +card(card.num, card.text, card.img, card.rotate)
+         +card(card.num, card.text, card.img, card.rotate, card.anchor)
 
 
 
