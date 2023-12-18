@@ -80,6 +80,16 @@ gulp.task("copy:js", function (callback) {
   callback();
 });
 
+gulp.task("copy:php", function (callback) {
+  return gulp.src("./src/php/**/*.*").pipe(gulp.dest("./build/php/"));
+  callback();
+});
+
+gulp.task("copy:docs", function (callback) {
+  return gulp.src("./src/docs/**/*.*").pipe(gulp.dest("./build/docs/"));
+  callback();
+});
+
 gulp.task("copy:fonts", function (callback) {
   return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/"));
   callback();
@@ -109,6 +119,10 @@ gulp.task("watch", function () {
 
   watch("./src/js/**/*.js", gulp.parallel("copy:js"));
 
+  watch("./src/php/**/*.php", gulp.parallel("copy:php"));
+
+  watch("./src/docs/**/*.*", gulp.parallel("copy:docs"));
+
   watch("./src/fonts/**/*.*", gulp.parallel("copy:fonts"));
 });
 
@@ -124,7 +138,15 @@ gulp.task(
   "default",
   gulp.series(
     "clean:build",
-    gulp.parallel("sass", "pug", "copy:img", "copy:js", "copy:fonts"),
+    gulp.parallel(
+      "sass",
+      "pug",
+      "copy:img",
+      "copy:js",
+      "copy:php",
+      "copy:docs",
+      "copy:fonts"
+    ),
     gulp.parallel("server", "watch")
   )
 );

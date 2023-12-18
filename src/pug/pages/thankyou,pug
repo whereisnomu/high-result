@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title Спасибо!
+   body 
+      section#aboutmethods
+         h2.h2 Спасибо! Мы получили Вашу заявку!
+         h4 В ближайшее время с вами свяжется наш специалист для уточнения деталей вашей задачи
+         img(src="./img/about_methods/vectors/top/puddle_top.svg", alt="puddle_top").cloud
+         img(src="./img/about_methods/vectors/top/wsshape.svg", alt="small shape").smallshape
+         img(src="./img/about_methods/vectors/top/wshape.svg", alt="white shape").whiteshape
+         img(src="./img/about_methods/vectors/top/bsshape.svg", alt="beige small shape").sbeige
+         img(src="./img/about_methods/vectors/top/bshape.svg", alt="beige shape").beige

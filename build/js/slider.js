@@ -9,7 +9,7 @@ new Splide(".splide", {
   breakpoints: {
     768: {
       width: "600px",
-      height: "420px",
+      height: "440px",
     },
     480: {
       width: "600px",
