@@ -1,13 +1,19 @@
+include ../components/button
+
 doctype html
 html(lang="en")
    head
       meta(charset="UTF-8")
       meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="shortcut icon", href="./img/logo.png", type="image/x-icon")
+      link(rel="stylesheet", href="./css/style.css")
       title Спасибо!
    body 
-      section#aboutmethods
-         h2.h2 Спасибо! Мы получили Вашу заявку!
-         h4 В ближайшее время с вами свяжется наш специалист для уточнения деталей вашей задачи
+      section#aboutmethods(style='height:100vh')
+         h2.h2 Спасибо! 
+            span Мы получили Вашу заявку!
+         h4(style="padding-bottom: 50px;") В ближайшее время с вами свяжется наш специалист
+         +button('/', "На главную", "blah")
          img(src="./img/about_methods/vectors/top/puddle_top.svg", alt="puddle_top").cloud
          img(src="./img/about_methods/vectors/top/wsshape.svg", alt="small shape").smallshape
          img(src="./img/about_methods/vectors/top/wshape.svg", alt="white shape").whiteshape

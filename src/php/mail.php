@@ -27,7 +27,7 @@ $mail->Username = 'tf-no-reply-bot@mail.ru';
 $mail->Password = 'VAUa90KXPg3huDgvFHnE';
 
 $name = $_POST["nameClient"];
-$phone = $_POST["phoneClient"];
+$phone = trim($_POST["phoneClient"]);
 $email = $_POST["emailClient"];
 
 $to = "arturchagirov@gmail.com";
@@ -35,9 +35,9 @@ $to_name = "Arthur";
 
 $mail->setFrom('tf-no-reply-bot@mail.ru', 'tf-no-reply-bot');
 
-$mail->addAddress('arturchagirov@gmail.com', 'Artur');
-$mail->AddCC('logorezultatfranchise@gmail.com', 'LogoRezultat');
-$mail->AddCC('multidevelop.java@gmail.com', 'Multi Punk');
+$mail->addAddress('yana.rost@mail.ru', 'Yana Rost');
+$mail->AddCC('irinazuboreva@topfranchise.ru', 'Irina Zubareva');
+$mail->AddCC('rezultat_logoped@mail.ru', 'Logoped Rezultat');
 
 
 $subject = "Новая заявка на франшизу! №". rand(100000, 999999); 
@@ -246,7 +246,7 @@ bgcolor="#ffffff"
                           padding: 0;
                         "
                       >
-                        Телефон: <a href="tel:'. $phone .'"> '. $phone .' </a>
+                        Телефон: <a href="tel:'.str_replace(' ', '', $phone).'"> '. $phone .' </a>
                       </p>
 
                       <p
@@ -367,5 +367,5 @@ $mail->msgHTML($message);
 
 $mail->send();
 
-header("Location: https://google.com")
+header("Location: ../thankyou.html")
 ?>
